@@ -3,7 +3,7 @@
 # Знайомство із середовищем. Налагодження програми. Структура програми. Базові обчислення. Модуль math
 # Варіант 18
 
-from math import sqrt, sin, cos, tan, log
+from math import cos, log, sin, sqrt, tan
 
 a = int(input("Введіть початок проміжку: a = "))
 b = int(input("Введіть кінець проміжку: b = "))
@@ -11,7 +11,7 @@ h = int(input("Введіть крок проміжку: h = "))
 
 lst1 = []
 for x in range(a, b + 1, h):
-    y = 2 * (x ** 2 - 3) - (sin(x ** 2) / 1 + cos(x)) + (cos(abs(x)) ** 2) - log(abs(x) + 2) - 1 + sin(x) ** 2
+    y = 2 * (x ** 2 - 3) - (sin(x) ** 2 / (1 + cos(x))) + cos(abs(x)) ** 2 - log(abs(x) + 2) - 1 + sin(x) ** 2
     lst1.append(round(y, 3))
 
 print(f"1) y = {lst1}")
